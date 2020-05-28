@@ -1,0 +1,13 @@
+# PyCharm
+.idea
+
+# MAC Store
+.DS_Store
+
+# Environments
+.env
+.venv
+
+# Local Resources
+*.sqlite3
+staticfiles

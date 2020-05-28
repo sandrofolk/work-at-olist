@@ -1,3 +1,81 @@
+# Library Project (Olist)
+
+## Description
+
+Software for a library to store book and authors data.  
+[Link](https://github.com/sandrofolk/work-at-olist) to repository on Github.
+
+## Requirements
+
+* Git;
+    > [https://git-scm.com/](https://git-scm.com/)
+* Python 3.8;
+    > Recommended install using [pyenv](https://github.com/pyenv/pyenv-installer)
+* Pipenv.
+    > How to install: [https://github.com/pypa/pipenv](https://github.com/pypa/pipenv)
+
+## Installing (setup) and testing instructions
+
+* Clone this project;
+
+    > SSH
+    ```
+    git clone git@github.com:sandrofolk/work-at-olist.git
+    cd work-at-olist 
+    ```
+    > or HTTPS
+    ```
+    git clone https://github.com/sandrofolk/work-at-olist.git
+    cd work-at-olist
+    ```
+
+* Create a `Virtual Environment (venv)` with Python 3.8;
+
+    ```
+    pipenv --python 3.8
+    ```
+
+* Install the dependencies of `Pipfile`;
+
+    ```
+    pipenv install --dev
+    ```
+
+* Configure the instance with `.env`;
+
+    ```
+    cp contrib/env-sample .env
+    ```
+
+* Apply the migrations and import `authors`;
+
+    ```
+    python manage.py migrate
+    python manage.py import_authors contrib/authors.csv
+    ```
+
+* Execute tests;
+
+    ```
+    python manage.py test
+    ```
+
+* Run Server.
+
+    ```
+    python manage.py runserver
+    ```
+
+## Work environment used
+
+* Desktop i7-7700 3.60GHz, 8GB Ram, SSD 240GB, GeForce GT 730 2GB;
+* Ubuntu 18.04.4 LTS x64;
+* IDE PyCharm Professional 2017.2.7.
+
+
+---
+
+
 # Work at Olist
 
 [Olist](https://olist.com/) is a company that offers an integration platform for sellers and marketplaces allowing them to sell their products across multiple channels.
